@@ -6,6 +6,12 @@
 package queuemanager;
 
 /**
+ * Links were used as a guide for this file.
+ * https://www.geeksforgeeks.org/given-a-linked-list-which-is-sorted-how-will-you-insert-in-sorted-way/?fbclid=IwAR1hey_iqaGrc2rFAOJW2xXF9sk_E0whVohz9YqIuM2QgEyN8Uok13rMTBI
+ * https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
+ */
+
+/**
  *
  * @author FireHunter3958
  */
