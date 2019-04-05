@@ -43,12 +43,37 @@ public class UnsortedArrayPriorityQueueTest {
     @Test
     public void testHead() throws Exception {
         System.out.println("head");
-        UnsortedArrayPriorityQueue instance = null;
-        Object expResult = null;
+        UnsortedArrayPriorityQueue instance = new UnsortedArrayPriorityQueue(8);
+        Object item = "James";
+        int priority = 99;
+        instance.add(item, priority);
+        Object expResult = instance.head();
         Object result = instance.head();
         assertEquals(expResult, result);
+        System.out.println(instance);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+    }
+    
+    /**
+     * Test of head method, of class UnsortedArrayPriorityQueue.
+     */
+    @Test
+    public void testHeadMany() throws Exception {
+        System.out.println("headMany");
+        UnsortedArrayPriorityQueue instance = new UnsortedArrayPriorityQueue(8);
+        Object item = "James";
+        int priority = 99;
+        instance.add(item, priority);
+        item = "Mike";
+        priority = 135;
+        instance.add(item, priority);
+        Object expResult = instance.head();
+        Object result = instance.head();
+        assertEquals(expResult, result);
+        System.out.println(instance);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -57,12 +82,49 @@ public class UnsortedArrayPriorityQueueTest {
     @Test
     public void testAdd() throws Exception {
         System.out.println("add");
-        Object item = null;
-        int priority = 0;
-        UnsortedArrayPriorityQueue instance = null;
+        Object item = "James";
+        int priority = 99;
+        UnsortedArrayPriorityQueue instance = new UnsortedArrayPriorityQueue(8);
         instance.add(item, priority);
+        System.out.println(instance);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+    }
+    
+    /**
+     * Test of add method, of class UnsortedArrayPriorityQueue.
+     */
+    @Test
+    public void testAddHigher() throws Exception {
+        System.out.println("addHigher");
+        Object item = "James";
+        int priority = 99;
+        UnsortedArrayPriorityQueue instance = new UnsortedArrayPriorityQueue(8);
+        instance.add(item, priority);
+        item = "Mike";
+        priority = 135;
+        instance.add(item, priority);
+        System.out.println(instance);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    
+    /**
+     * Test of add method, of class UnsortedArrayPriorityQueue.
+     */
+    @Test
+    public void testAddLower() throws Exception {
+        System.out.println("addLower");
+        Object item = "James";
+        int priority = 99;
+        UnsortedArrayPriorityQueue instance = new UnsortedArrayPriorityQueue(8);
+        instance.add(item, priority);
+        item = "Robert";
+        priority = 11;
+        instance.add(item, priority);
+        System.out.println(instance);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -71,38 +133,90 @@ public class UnsortedArrayPriorityQueueTest {
     @Test
     public void testRemove() throws Exception {
         System.out.println("remove");
-        UnsortedArrayPriorityQueue instance = null;
+        UnsortedArrayPriorityQueue instance = new UnsortedArrayPriorityQueue(8);
+        Object item = "James";
+        int priority = 99;
+        instance.add(item, priority);
         instance.remove();
+        System.out.println(instance);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+    }
+    
+    /**
+     * Test of remove method, of class UnsortedArrayPriorityQueue.
+     */
+    @Test
+    public void testRemoveMany() throws Exception {
+        System.out.println("removeMany");
+        UnsortedArrayPriorityQueue instance = new UnsortedArrayPriorityQueue(8);
+        Object item = "James";
+        int priority = 99;
+        instance.add(item, priority);
+        item = "Robert";
+        priority = 37;
+        instance.add(item, priority);
+        instance.remove();
+        System.out.println(instance);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
 
     /**
      * Test of isEmpty method, of class UnsortedArrayPriorityQueue.
      */
     @Test
-    public void testIsEmpty() {
+    public void testIsEmpty() throws Exception{
         System.out.println("isEmpty");
-        UnsortedArrayPriorityQueue instance = null;
+        UnsortedArrayPriorityQueue instance = new UnsortedArrayPriorityQueue(8);
+        Object item = "James";
+        int priority = 99;
+        instance.add(item, priority);
         boolean expResult = false;
         boolean result = instance.isEmpty();
         assertEquals(expResult, result);
+        System.out.println(result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
      * Test of toString method, of class UnsortedArrayPriorityQueue.
      */
     @Test
-    public void testToString() {
+    public void testToString() throws Exception{
         System.out.println("toString");
-        UnsortedArrayPriorityQueue instance = null;
-        String expResult = "";
+        UnsortedArrayPriorityQueue instance = new UnsortedArrayPriorityQueue(8);
+        Object item = "James";
+        int priority = 99;
+        instance.add(item, priority);
+        String expResult = "[(James, 99)]";
         String result = instance.toString();
         assertEquals(expResult, result);
+        System.out.println(result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+    }
+    
+    /**
+     * Test of toString method, of class UnsortedArrayPriorityQueue.
+     */
+    @Test
+    public void testToStringMany() throws Exception{
+        System.out.println("toStringMany");
+        UnsortedArrayPriorityQueue instance = new UnsortedArrayPriorityQueue(8);
+        Object item = "James";
+        int priority = 99;
+        instance.add(item, priority);
+        item = "Robert";
+        priority = 37;
+        instance.add(item, priority);
+        String expResult = "[(Robert, 37), (James, 99)]";
+        String result = instance.toString();
+        assertEquals(expResult, result);
+        System.out.println(result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
     
 }
